@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PokemonList from './PokemonList';
 import Spinner from './Spinner';
 
 export default function PokemonSearch() {
@@ -38,6 +39,7 @@ export default function PokemonSearch() {
         <button>Get pokemon</button>
       </form>
       {/* Make a PokemonList component to import and use here. Use a ternary to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
+      <PokemonList pokemon={pokemon} />
       {
         loading
           && <Spinner />

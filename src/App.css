@@ -72,6 +72,11 @@ label {
   display: block;
 }
 
+figure img {
+  width: 150px;
+  height: 150px;
+}
+
 img.spinner {
   width: 150px;
   position: absolute;
