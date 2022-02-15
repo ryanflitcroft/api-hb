@@ -71,3 +71,10 @@ section li {
 label {
   display: block;
 }
+
+img.spinner {
+  width: 150px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
