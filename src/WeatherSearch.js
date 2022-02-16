@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Weather from './Weather';
 import WeatherSpinner from './WeatherSpinner';
 
 export default function WeatherSearch() {
@@ -42,6 +43,8 @@ export default function WeatherSearch() {
         <button>Get weather</button>
       </form>
       {/* Make a ForecastList component to import and use here. Use a ternary to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
+      
+      <Weather weather={weather}/>
       {
         loading
         &&
