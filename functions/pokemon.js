@@ -3,7 +3,6 @@ require('dotenv').config();
 
 exports.handler = async (event, context) => {
   try {
-    console.log('||event: ', event, '||context: ', context);
     // grab the pokemon's name from the request's query parameters
     // here is an example from the netlify docs:
     // https://functions.netlify.com/playground/#hello%2C-%7Bname%7D 

@@ -6,7 +6,7 @@ export default function PokemonSearch() {
   // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState('pikachu');
+  const [search, setSearch] = useState('');
   
   async function handlePokemonSubmit(e) {
     e.preventDefault();
@@ -30,7 +30,6 @@ export default function PokemonSearch() {
     <section className='pokemon'>
       {/* make the fetch on submit */}
       <form onSubmit={handlePokemonSubmit}>
-            Search pokemon for a city
         {/* add inputs/labels for city name, state, and country, using all the things we need with react forms. Don't forget to use the value property to sync these up with the default values in react state */}
         <label>Search Pokemon</label>
         <input onChange={(e) => setSearch(e.target.value)}
