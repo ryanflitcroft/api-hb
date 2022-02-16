@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Weather({ weather }) {
-  console.log('||weather: ', weather);
   return (
     <>
       <p>
