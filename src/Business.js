@@ -7,7 +7,6 @@ export default function Business({ business }) {
         <img src={business.image_url} alt={business.name} />
         <figcaption>{business.name}</figcaption>
       </figure>
-      {business.name}
     </>
   );
 }
