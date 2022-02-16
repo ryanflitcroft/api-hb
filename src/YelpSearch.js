@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BusinessList from './BusinessList';
+import YelpSpinner from './YelpSpinner';
 
 export default function YelpSearch() {
     // you'll need to track your yelp search results, the loading state, and a form field for location with a default value.
@@ -17,7 +18,7 @@ export default function YelpSearch() {
     const json = await response.json();
     console.log('searchJson: ', json);
 
-    // setBusinesses(json);
+    setBusinesses(json);
     // put the jsonified data in state and set the loading state to false
     setLoading(false);
   }
@@ -33,6 +34,10 @@ export default function YelpSearch() {
         <button>Search yelp</button>
       </form>
       {/* Make a BusinessesList component to import and use here. Use a ternary to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
+      {
+        loading
+        && <YelpSpinner />
+      }
       <BusinessList businesses={businesses} />
     </section>
   );
